@@ -1,0 +1,9 @@
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+dependencies {
+	implementation(project(':module_client'))
+	implementation(project(':module_order'))
+	// https://mvnrepository.com/artifact/com.h2database/h2
+	runtimeOnly('com.h2database:h2:2.3.232')
+}
