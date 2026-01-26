@@ -1,7 +1,7 @@
 package com.example.client.application.ports;
 
-import com.example.client.application.dtos.RegisterCustomerUseCaseInput;
-import com.example.client.application.dtos.RegisterCustomerUseCaseOutput;
+import com.example.client.application.mappers.RegisterCustomerUseCaseInput;
+import com.example.client.application.mappers.RegisterCustomerUseCaseOutput;
 import com.example.client.domain.entities.Customer;
 
 
