@@ -4,12 +4,12 @@ import com.example.client.domain.value_objects.Gender;
 
 import java.util.Objects;
 
-public abstract class Person {
+abstract sealed class Person permits Customer {
     private String name;
     private Gender sex;
 
 
-    public Person(String name, Gender sex) {
+    protected Person(String name, Gender sex) {
         nameValid(name);
         sexValid(sex);
         this.name = name;

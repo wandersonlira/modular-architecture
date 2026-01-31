@@ -6,9 +6,8 @@ import com.example.client.domain.value_objects.StatusCustomer;
 
 import java.math.BigDecimal;
 import java.util.Objects;
-import java.util.regex.Pattern;
 
-public class Customer extends Person {
+public final class Customer extends Person {
     private String city;
     private Email email;
     private BigDecimal discount;
@@ -17,25 +16,11 @@ public class Customer extends Person {
 
     public Customer(String name, Gender sex, Email email, String city) {
         super(name, sex);
-//        emailValid(email);
         validateCity(city);
         this.email = email;
         this.city = city;
         this.statusCustomer = StatusCustomer.INACTIVE;
     }
-
-//  Foi substituido pelo Value Objects (Email)
-//    private void emailValid(Email email) {
-//        if (email == null || email.trim().isEmpty()) {
-//            throw new IllegalArgumentException("Email is required.");
-//        }
-//
-//        String regexEmail = "^[^@]+@[^@]+\\.[^@]+$";
-//        if (!Pattern.matches(regexEmail, email)) {
-//            throw new IllegalArgumentException("Invalid email.");
-//        }
-//
-//    }
 
     private void validateCity(String city) {
         if (city == null || city.trim().isBlank()) {
