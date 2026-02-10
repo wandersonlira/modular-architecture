@@ -1,6 +1,6 @@
-package com.example.client.domain.entities;
+package com.example.client.core.domain;
 
-import com.example.client.domain.value_objects.Gender;
+import com.example.client.core.value_objects.Gender;
 
 import java.util.Objects;
 
