@@ -1,7 +1,6 @@
 package com.example.client.application.contracts;
 
-import com.example.client.application.mappers.RegisterCustomerUseCaseOutput;
-import com.example.client.domain.entities.Customer;
+import com.example.client.core.domain.Customer;
 
 import java.util.List;
 
