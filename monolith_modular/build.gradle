@@ -1,17 +1,15 @@
 plugins {
-    id 'java'
-    id 'org.springframework.boot' version '3.5.9'
+//    id 'java'
+    id 'org.springframework.boot' version '4.0.2'
     id 'io.spring.dependency-management' version '1.1.7'
 }
 
 subprojects {
 
-    apply plugin: 'java'
-    apply plugin: 'org.springframework.boot'
-    apply plugin: 'io.spring.dependency-management'
-
     group = 'com.example'
     version = '0.0.1-SNAPSHOT'
+
+    apply plugin: 'java-library'
 
     java {
         toolchain {
@@ -23,17 +21,21 @@ subprojects {
         mavenCentral()
     }
 
-    dependencies {
-//        https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
-        implementation('org.springframework.boot:spring-boot-starter-web:3.5.9')
-        testImplementation('org.springframework.boot:spring-boot-starter-test')
-        testRuntimeOnly('org.junit.platform:junit-platform-launcher')
-    }
-
     tasks.withType(Test).tap {
         configureEach {
             useJUnitPlatform()
         }
     }
 
-}
+    tasks.withType(JavaCompile).configureEach {
+        options.incremental = true
+    }
+
+//    tasks.register('gerarArquivo') {
+//        inputs.file("entrada.txt")
+//        outputs.file("saida.txt")
+//
+//        doLast {
+//            // lógica determinística
+//        }
+    }
