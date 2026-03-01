@@ -1,8 +1,8 @@
-package com.example.client.application.ports;
+package com.example.client.application.contracts;
 
 import com.example.client.application.mappers.RegisterCustomerUseCaseInput;
 import com.example.client.application.mappers.RegisterCustomerUseCaseOutput;
-import com.example.client.domain.entities.Customer;
+import com.example.client.core.domain.Customer;
 
 
 public interface IRegisterCustomerUseCase {
