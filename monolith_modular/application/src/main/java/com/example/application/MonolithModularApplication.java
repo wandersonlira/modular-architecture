@@ -8,6 +8,6 @@ import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
 @Import({ClientModuleConfig.class, ModuleOrderConfig.class})
-public class MonolithModularApplication {
+final class MonolithModularApplication {
 	public static void main(String[] args) { SpringApplication.run(MonolithModularApplication.class, args);	}
 }
