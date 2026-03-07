@@ -1,8 +1,8 @@
-package com.example.client.domain.entities;
+package com.example.client.core.domain;
 
-import com.example.client.domain.value_objects.Email;
-import com.example.client.domain.value_objects.Gender;
-import com.example.client.domain.value_objects.StatusCustomer;
+import com.example.client.core.value_objects.Email;
+import com.example.client.core.value_objects.Gender;
+import com.example.client.core.value_objects.StatusCustomer;
 
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -76,12 +76,6 @@ public final class Customer extends Person {
                 ", email=" + email.getEmail() +
                 ", statusCustomer=" + statusCustomer +
                 '}';
-    }
-
-    public static void main(String[] args) {
-        Email email = new Email("wandersonlira@mv.com.br");
-        Customer customer = new Customer("Wanderson", Gender.MAN, email, "Recife");
-        System.out.println("AAAAA: " + customer.toString());
     }
 
 }
